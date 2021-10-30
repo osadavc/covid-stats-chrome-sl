@@ -1,25 +1,22 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+  "manifest_version": 2,
+  "name": "Covid Meter SL",
+  "description": "This will show Sri Lanka's covid cases count with comparisons based on previous day",
+  "version": "1.0.0",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Covid Meter SL"
+  },
+  "content_scripts": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "matches": ["<all_urls>"],
+      "js": ["main.js"]
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "icons": {
+    "16": "covid16.png",
+    "48": "covid48.png",
+    "128": "covid128.png"
+  },
+  "permissions": ["activeTab", "tabs", "<all_urls>"]
 }
