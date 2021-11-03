@@ -583,6 +583,9 @@ video {
 .min-h-\[500px\] {
 	min-height: 500px;
 }
+.w-\[10\.3rem\] {
+	width: 10.3rem;
+}
 .w-full {
 	width: 100%;
 }
@@ -627,13 +630,11 @@ video {
 	padding-top: 0.75rem;
 	padding-bottom: 0.75rem;
 }
-.px-5 {
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
+.text-center {
+	text-align: center;
 }
-.px-6 {
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+.font-lato {
+	font-family: Lato;
 }
 .text-sm {
 	font-size: 0.875rem;
