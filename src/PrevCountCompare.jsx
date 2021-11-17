@@ -1,4 +1,4 @@
-const PrevCountCompare = ({ prevCount }) => {
+const PrevCountCompare = ({ prevCount, covidToday }) => {
   return (
     <div>
       {prevCount && (

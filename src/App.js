@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <div className="flex flex-col justify-center items-center min-w-[340px] max-w-[310px] min-h-[500px] bg-gray-100 relative font-lato text-base">
-      <PrevCountCompare prevCount={prevCount} />
+      <PrevCountCompare prevCount={prevCount} covidToday={covidToday} />
 
       <div className="w-full flex flex-col justify-center items-center">
         <div className="flex justify-center items-center mb-10 bg-gray-200 py-3 rounded-lg shadow-sm cursor-pointer space-x-2 w-[10.3rem]">
