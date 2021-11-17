@@ -13,10 +13,13 @@
       "js": ["main.js"]
     }
   ],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "icons": {
-    "16": "covid16.png",
-    "48": "covid48.png",
-    "128": "covid128.png"
+    "16": "covid.png",
+    "48": "covid.png",
+    "128": "covid.png"
   },
   "permissions": ["activeTab", "tabs", "<all_urls>"]
 }

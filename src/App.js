@@ -17,7 +17,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center min-w-[340px] max-w-[310px] min-h-[500px] bg-gray-100 relative font-lato">
+    <div className="flex flex-col justify-center items-center min-w-[340px] max-w-[310px] min-h-[500px] bg-gray-100 relative font-lato text-base">
       {prevCount && (
         <div className="absolute top-10 text-md w-[10.3rem] text-center ">
           {prevCount == covidToday?.local_new_cases && (
@@ -52,7 +52,7 @@ const App = () => {
           <h1 className="text-lg">{covidToday?.local_new_deaths}</h1>
         </div>
       </div>
-      <h3 className="text-gray-500 absolute bottom-5">
+      <h3 className="text-gray-500 absolute bottom-5 text-sm">
         <span className="text-indigo-700">Last Updated</span> -{" "}
         {covidToday?.update_date_time}
       </h3>
