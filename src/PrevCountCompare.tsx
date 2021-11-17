@@ -1,9 +1,16 @@
-const PrevCountCompare = ({ prevCount, covidToday }) => {
+import { CovidToday } from "./interfaces/covidToday";
+
+interface PrevCountCompareProps {
+  prevCount: number;
+  covidToday: CovidToday;
+}
+
+const PrevCountCompare = ({ prevCount, covidToday }: PrevCountCompareProps) => {
   return (
     <div>
       {prevCount && (
         <div className="absolute top-10 text-md w-[10.3rem] text-center ">
-          {prevCount == covidToday?.local_new_cases && (
+          {prevCount === covidToday?.local_new_cases && (
             <h1 className="font-bold">Nothing New Here, Not Worth Checking</h1>
           )}
           {prevCount > covidToday?.local_new_cases && (

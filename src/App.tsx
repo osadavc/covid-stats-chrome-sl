@@ -1,13 +1,14 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { CovidToday } from "./interfaces/covidToday";
 import PrevCountCompare from "./PrevCountCompare";
 
 const App = () => {
-  const [covidToday, setCovidToday] = useState({});
-  const [prevCount, setPrevCount] = useState(0);
+  const [covidToday, setCovidToday] = useState<CovidToday | null>(null);
+  const [prevCount, setPrevCount] = useState<number | null>(0);
 
   useEffect(() => {
-    setPrevCount(localStorage.getItem("prevCount"));
+    setPrevCount(parseInt(localStorage.getItem("prevCount")!));
 
     axios
       .get("https://hpb.health.gov.lk/api/get-current-statistical")
@@ -20,7 +21,7 @@ const App = () => {
 
   return (
     <div className="flex flex-col justify-center items-center min-w-[340px] max-w-[310px] min-h-[500px] bg-gray-100 relative font-lato text-base">
-      <PrevCountCompare prevCount={prevCount} covidToday={covidToday} />
+      <PrevCountCompare prevCount={prevCount!} covidToday={covidToday!} />
 
       <div className="w-full flex flex-col justify-center items-center">
         <div className="flex justify-center items-center mb-10 bg-gray-200 py-3 rounded-lg shadow-sm cursor-pointer space-x-2 w-[10.3rem]">
