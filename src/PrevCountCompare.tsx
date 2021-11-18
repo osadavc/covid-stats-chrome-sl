@@ -7,9 +7,9 @@ interface PrevCountCompareProps {
 
 const PrevCountCompare = ({ prevCount, covidToday }: PrevCountCompareProps) => {
   return (
-    <div>
-      {prevCount && (
-        <div className="absolute top-10 text-md w-[10.3rem] text-center ">
+    <div className="flex justify-center">
+      {!!prevCount && (
+        <div className="absolute top-10 text-md w-[10.3rem] text-center">
           {prevCount === covidToday?.local_new_cases && (
             <h1 className="font-bold">Nothing New Here, Not Worth Checking</h1>
           )}
